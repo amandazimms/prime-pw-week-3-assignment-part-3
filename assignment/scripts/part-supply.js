@@ -33,8 +33,10 @@ for(let i = 0; i < supplyChanges.length; i++){
     console.log('Added', supplyChanges[i], 'parts.');
   } else if (supplyChanges[i] === 0) { //if the value is zero
     console.log('No Change.');
-  } else { //if the value is negative (the only other option)
+  } else if (supplyChanges[i] < 0) { //if the value is negative 
     console.log('Removed', supplyChanges[i], 'parts.');
+  } else {
+      console.log('Error: supplyChanges[', i, '] is neither >, <, or === 0. Check value of supplyChanges[', i, ']');
   }
 }
 console.log('6. Showing supplyChanges...');
@@ -50,8 +52,10 @@ for (const qty of supplyChanges){
     console.log('Added', qty, 'parts.');
   } else if (qty === 0) { //if the value is zero
     console.log('No Change.');
-  } else { //if the value is negative (the only other option)
+  } else if (qty < 0) { //if the value is negative 
     console.log('Removed', qty, 'parts.');
+  } else {
+    console.log('Error:', qty, 'is neither >, <, or === 0. Check value of' qty);
   }
 }
 
@@ -63,8 +67,10 @@ while (a < supplyChanges.length) {
     console.log('Added', supplyChanges[a], 'parts.');
   } else if (supplyChanges[a] === 0) { //if the value is zero
     console.log('No Change.');
-  } else { //if the value is negative (the only other option)
+  } else if (supplyChanges[a] < 0) { //if the value is negative (the only other option)
     console.log('Removed', supplyChanges[a], 'parts.');
+  } else {
+    console.log('Error: supplyChanges[', a, '] is neither >, <, or === 0. Check value of supplyChanges[', a, ']');
   }
 
   a++;
